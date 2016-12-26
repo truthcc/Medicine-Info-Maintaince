@@ -108,7 +108,7 @@
   <ItemGroup>
     <Content Include="Web.config" />
     <Content Include="UI-Medicine Info Maintaince.aspx" />
-    <Content Include="药品信息维护.html" />
+    <Content Include="UI-Medicine Info Maintaince.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,13 +121,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BAL层.csproj">
+    <ProjectReference Include="..\BLL\BAL.csproj">
       <Project>{a0b17fdb-0656-4132-ac2c-a870782ba522}</Project>
-      <Name>BAL层</Name>
+      <Name>BAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ClassLibrary\Model类库.csproj">
+    <ProjectReference Include="..\ClassLibrary\Model.csproj">
       <Project>{fda80325-e523-4d3c-b267-ac47e3465d64}</Project>
-      <Name>Model类库</Name>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

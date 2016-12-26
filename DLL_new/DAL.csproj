@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A0B17FDB-0656-4132-AC2C-A870782BA522}</ProjectGuid>
+    <ProjectGuid>{85F386BC-3EB5-41E7-BDCC-AD14E052FF21}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BLL</RootNamespace>
-    <AssemblyName>BLL</AssemblyName>
+    <RootNamespace>DLL_new</RootNamespace>
+    <AssemblyName>DLL_new</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,17 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BAL-DateProcess.cs" />
+    <Compile Include="DAL-SQLHelper.cs" />
+    <Compile Include="DAL-Medcine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary\Model类库.csproj">
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\Model.csproj">
       <Project>{fda80325-e523-4d3c-b267-ac47e3465d64}</Project>
-      <Name>Model类库</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DLL_new\DAL层.csproj">
-      <Project>{85f386bc-3eb5-41e7-bdcc-ad14e052ff21}</Project>
-      <Name>DAL层</Name>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
