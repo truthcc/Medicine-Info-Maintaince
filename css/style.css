@@ -1,0 +1,54 @@
+/*Css构成：选择器+声明块+属性+值*/
+body {
+    background: #f2f2f2;
+    font-size:16px;
+}
+/*CSS应用三种方式:内联/页面标签style/链接/导入(植入)@import url(***.css)*/
+
+/*标签选择器*/
+p {border:solid 1px #000;}
+
+/*类选择器*/
+/*定义类选择器: .选择器{...}*/
+/*应用类选择器: class 选择器 {...}*/
+.intro {background: #ff0;} 
+/*在html中应用:<p class='intro'>...</p>*/
+
+/*id选择器:在html的元素属性中标记元素,然后在css中编辑针对此id的标签的样式*/
+#logo{
+    border:solid 5px #fff;
+}
+
+/*标签分组,针对html中同类或非同类的标签进行样式编辑:标签1,标签2,标签3 {...}*/
+p,h1,h2,h3,h4 {
+    border-bottom: dotted 2px #f00;
+}
+/*针对所有元素标签使用样式: * {...}*/
+
+/*伪类:为选择器增加特殊效果,以超链接为例*/
+a:link{
+    color:#333;
+    text-decoration: none;
+}
+a:visited{
+    color:#f00;
+    text-decoration: none;
+}
+a:hover{
+    color:#00f;
+    text-decoration: none;
+}
+a::active{
+    color:#ff0;
+}
+
+
+/*属性选择器:标签[属性] //包含属性;
+标签[属性=值] //特定值;
+标签[属性^=值] //特定值开头;
+标签[属性$=值] //特定值结尾*/
+img[title] {
+    border:solid 3px #000;
+    padding: 5px;
+    background:#fff;
+}
