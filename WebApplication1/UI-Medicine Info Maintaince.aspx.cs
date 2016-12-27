@@ -48,8 +48,8 @@ namespace WebApplication1
         {
             Medicine med = new Medicine();
             med.Name = medcinename.Value;
-            med.Productor = productor.Value;
-            med.ExpireDate = Convert.ToDateTime(expiredate.Value);
+            //med.Productor = productor.Value;
+            //med.ExpireDate = Convert.ToDateTime(expiredate.Value);
             DataProcess bal = new DataProcess();
             int i=bal.delete(med);
             if (i == 1)
@@ -85,8 +85,8 @@ namespace WebApplication1
         {
             Medicine med = new Medicine();
             med.Name = medcinename.Value;
-            med.Productor = productor.Value;
-            med.ExpireDate = Convert.ToDateTime(expiredate.Value);
+            //med.Productor = productor.Value;
+            //med.ExpireDate = Convert.ToDateTime(expiredate.Value);
             DataProcess bal = new DataProcess();
             GridView1.DataSource= bal.get(med);
             GridView1.DataBind();

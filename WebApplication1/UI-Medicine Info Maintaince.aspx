@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>药品字典维护</title>
     <style type="text/css">
         .auto-style1 {
             width: 99px;
@@ -36,50 +36,61 @@
             width: 418px;
             height: 43px;
         }
+
+        .clearfix {
+            height: 45px;
+        }
     </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="row">
-        <form id="form1" runat="server">
-            <div class="form-group">
-                <table class="width=400">
-                    <tr>
-                        <td class="auto-style1">
-                            <label text="text" runat="server">药品名称:</label>
-                        </td>
-                        <td class="auto-style2">
-                            <input type="text" name="Name" id="medcinename" runat="server" value="药品名称" style="height: 26px; width: 269px" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style5">
-                            <label text="text" runat="server">生产厂家:</label>
-                        </td>
-                        <td class="auto-style6">
-                            <input type="text" name="Productor" id="productor" runat="server" value="生产厂家" style="height: 23px; width: 267px" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style3">
-                            <label text="text" runat="server">药品有效期:</label>
-                        </td>
-                        <td class="auto-style4">
-                            <input type="date" name="ExpireDate" id="expiredate" runat="server" value="药品有效期" style="height: 27px; width: 265px" />
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div>
-                <asp:Button ID="add" runat="server" Text="添加" OnClick="add_Click" />
-                <asp:Button ID="update" runat="server" Text="修改" OnClick="update_Click" />
-                <asp:Button ID="delete" runat="server" Text="删除" OnClick="delete_Click" />
-                <asp:Button ID="search" runat="server" Text="查询" OnClick="search_Click" Style="height: 21px" />
-                <br />
-                <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
-                </asp:GridView>
-            </div>
-        </form>
-    </div>
+    <form id="form1" runat="server">
+        <div class="form-group">
+            <div class="col-md-4"></div>
+            <h3>药品信息录入</h3>
+        </div>
+        <br /><br /><br /><br />
+        <div class="row">
+                <div class="form-group">
+                    <div class="col-md-2"></div>
+                    <label for="name" class="col-md-2" runat="server"><span class="glyphicon glyphicon-camera"></span>药品名称:</label>
+                    <div class="col-md-2">
+                        <input class="form-control" type="text" name="Name" id="medcinename" runat="server" placeholder="药品名称" autofocus="autofocus" style="height: 30px; width: 267px">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group">
+                    <div class="col-md-2"></div>
+                    <label for="name" class="col-md-2" runat="server"><span class="glyphicon glyphicon-phone"></span>生产厂家:</label>
+                    <div class="col-md-2">
+                        <input class="form-control" type="text" name="Productor" id="productor" runat="server" placeholder="生产厂家" style="height: 30px; width: 267px">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group">
+                    <div class="col-md-2"></div>
+                    <label for="name" class="col-md-2" runat="server"><span class="glyphicon glyphicon-calendar"></span>药品有效期:</label>
+                    <div class="col-md-2">
+                        <input class="form-control" type="date" name="ExpireDate" id="expiredate" runat="server" placeholder="药品有效期" style="height: 30px; width: 267px">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+        </div>
+        <br />
+        <br />
+        <div class="col-md-6"></div>
+        <div>
+            <asp:Button ID="add" runat="server" Text="添加" OnClick="add_Click" />
+            <asp:Button ID="update" runat="server" Text="修改" OnClick="update_Click" />
+            <asp:Button ID="delete" runat="server" Text="删除" OnClick="delete_Click" />
+            <asp:Button ID="search" runat="server" Text="查询" OnClick="search_Click" />
+            <br/><br/>
+            <div class="col-md-2"></div>
+            <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="878px"></asp:GridView>
+        </div>
+    </form>
 
 </body>
 </html>
